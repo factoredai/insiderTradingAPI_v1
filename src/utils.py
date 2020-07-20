@@ -51,6 +51,11 @@ def data_layer(sp_100_file, data_path, perc_space, perc_time):
         curr_table = pd.pivot_table(insider_data,
                                     index=['date'],
                                     columns=['Transaction'], aggfunc={"Transaction": len})
+        curr_hist["volatility"] = (curr_hist.High - curr_hist.Low)/(curr_hist.Open + np.finfo(float).eps)
+        curr_hist["change_price_beg_end"] = curr_hist.Open - curr_hist.Close
+        curr_hist["change_price"] = curr_hist.High - curr_hist.Low
+        curr_hist["Volume_rel_price"] = curr_hist.Volume*curr_hist["change_price"]
+        curr_hist["Vol_rel_volaitlity"] = curr_hist.Volume*curr_hist["volatility"]
         curr_table = ~curr_table.isnull()
         curr_table.columns = [col[1] for col in curr_table.columns]
         curr_hist = curr_hist.merge(curr_table, how="left", left_index=True, right_index=True)
@@ -73,7 +78,9 @@ def data_layer(sp_100_file, data_path, perc_space, perc_time):
 def get_dataset(stocks, space, train_samples=None, window_size=21):
     train_datasets = []
     expected_columns = ["Open", "High", "Low", "Close", "Volume", "Dividends", 
-                        "Stock Splits", "Buy", "Option Exercise", "Sale"]
+                        "Stock Splits","volatility",   
+                        "change_price_beg_end", "change_price","Volume_rel_price",
+                        "Vol_rel_volaitlity" , "Buy", "Option Exercise", "Sale"]
     if train_samples is not None:
         valid_datasets = []
     print("Companies: ", space)
@@ -97,7 +104,8 @@ def get_dataset(stocks, space, train_samples=None, window_size=21):
         dataset = tf.data.Dataset.from_tensor_slices(stocks[company].values)
         dataset = dataset.window(window_size, shift=1, drop_remainder=True)
         dataset = dataset.flat_map(lambda window: window.batch(window_size))
-        dataset = dataset.map(lambda window: (window[:-1], window[-1:, -3:]))
+        dataset = dataset.map(lambda window: ((window[:-1], window[-1,:-3]), window[-1:, -3:]))
+
         if train_samples is not None:
             train_datasets.append(dataset.take(train_samples))
             valid_datasets.append(dataset.skip(train_samples))
