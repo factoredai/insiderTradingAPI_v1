@@ -2,6 +2,7 @@ from flask_restful import reqparse, Resource
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib
 import os 
 from flask import send_file
 import sys
@@ -52,6 +53,6 @@ class PlotGenerator(Resource):
         #plt.boxplot(data, positions=x, notch=True)
         plt.title(self.ticker_name[ticker])
         plt.savefig('plot.png')
-
+        matplotlib.use('agg')
 
         return send_file(os.getcwd() + '/plot.png', as_attachment=True)
