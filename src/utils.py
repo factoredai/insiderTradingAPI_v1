@@ -17,7 +17,6 @@ def infer_year(current_month, current_year):
     def _infer_year(x):
         delta_months = dict_cont["previous_month"] - x
         if x>=1 and delta_months>=0:
-            dict_cont["current_year"]
             dict_cont["previous_month"] = x
         else:
             dict_cont["previous_month"] = x
