@@ -17,7 +17,6 @@ def infer_year(current_month, current_year):
     def _infer_year(x):
         delta_months = dict_cont["previous_month"] - x
         if x>=1 and delta_months>=0:
-            dict_cont["current_year"]
             dict_cont["previous_month"] = x
         else:
             dict_cont["previous_month"] = x
@@ -55,7 +54,7 @@ def data_layer(sp_100_file, data_path, perc_space, perc_time):
         curr_hist["change_price_beg_end"] = curr_hist.Open - curr_hist.Close
         curr_hist["change_price"] = curr_hist.High - curr_hist.Low
         curr_hist["Volume_rel_price"] = curr_hist.Volume*curr_hist["change_price"]
-        curr_hist["Vol_rel_volaitlity"] = curr_hist.Volume*curr_hist["volatility"]
+        curr_hist["Vol_rel_volatility"] = curr_hist.Volume*curr_hist["volatility"]
         curr_table = ~curr_table.isnull()
         curr_table.columns = [col[1] for col in curr_table.columns]
         curr_hist = curr_hist.merge(curr_table, how="left", left_index=True, right_index=True)
@@ -77,10 +76,9 @@ def data_layer(sp_100_file, data_path, perc_space, perc_time):
 
 def get_dataset(stocks, space, train_samples=None, window_size=21):
     train_datasets = []
-    expected_columns = ["Open", "High", "Low", "Close", "Volume", "Dividends", 
-                        "Stock Splits","volatility",   
-                        "change_price_beg_end", "change_price","Volume_rel_price",
-                        "Vol_rel_volaitlity" , "Buy", "Option Exercise", "Sale"]
+    expected_columns = ['Open', 'High', 'Low', 'Close', 'Volume', 'Perc_sp100', 'volatility', 
+                       'change_price_beg_end', 'change_price', 'Volume_rel_price', 'Vol_rel_volatility',
+                       'Dividends', 'Stock Splits', 'Buy', 'Option Exercise', 'Sale']
     if train_samples is not None:
         valid_datasets = []
     print("Companies: ", space)
