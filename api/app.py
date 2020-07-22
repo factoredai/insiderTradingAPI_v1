@@ -31,6 +31,7 @@ ticker2name = data[["ticker", "issuername"]].drop_duplicates().\
                 set_index("ticker").to_dict()["issuername"]
 
 dict_frames = {}
+amount_negotiated_avg = pd.DataFrame()
 for symbol in symbols:
     curr_table = pd.pivot_table(data[data["ticker"]==symbol], 
                                 values=["transactionshares", 
@@ -46,7 +47,20 @@ for symbol in symbols:
     stock_df = serie.history(start=data["transactiondate"].min(), 
                              end=data["transactiondate"].max(), 
                              interval="1d")
-    dict_frames[symbol] = stock_df.merge(curr_table, how="left", left_index=True, right_index=True)    
+    dict_frames[symbol] = stock_df.merge(curr_table, how="left", left_index=True, right_index=True)
+    
+    dict_frames[symbol]["Amount_negotiated"] = dict_frames[symbol]["Volume"]*dict_frames[symbol]["Close"]
+    dict_frames[symbol]["Amount_negotiated_MA"] = dict_frames[symbol]["Amount_negotiated"].rolling(5).mean().shift(1)
+    dict_frames[symbol]["Perc_amount_vs_MA"] = dict_frames[symbol]["Amount_negotiated"]\
+                                                /dict_frames[symbol]["Amount_negotiated_MA"]
+    if len(amount_negotiated_avg)<1:
+        amount_negotiated_avg[symbol] = dict_frames[symbol]["Amount_negotiated"]
+    else:
+        amount_negotiated_avg[symbol] = dict_frames[symbol]["Amount_negotiated"]
+
+amount_negotiated_avg = amount_negotiated_avg.mean(axis=1)
+for key, val in dict_frames.items():
+    dict_frames[key]["Perc_amount_sp100"] = dict_frames[key]["Amount_negotiated"]/amount_negotiated_avg    
 
 api.add_resource(PlotGenerator, '/generate_plot', resource_class_kwargs={'dict_frames':dict_frames, 
                                                                     'ticker_name':ticker2name})

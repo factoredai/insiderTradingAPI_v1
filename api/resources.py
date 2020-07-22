@@ -35,6 +35,7 @@ class PlotGenerator(Resource):
         ticker = args['ticker']
         val = self.dict_frames[ticker]
         val = val.drop(columns=["Dividends", "Stock Splits"])
+        matplotlib.use('agg')
         fig, ax = plt.subplots(2, 1, figsize=(20, 12))
         ax1 = ax[0]
         ax4 = ax[1]
@@ -101,6 +102,6 @@ class PlotGenerator(Resource):
         #plt.boxplot(data, positions=x, notch=True)
         plt.title(self.ticker_name[ticker])
         plt.savefig('plot.png')
-        matplotlib.use('agg')
+      
 
         return send_file(os.getcwd() + '/plot.png', as_attachment=True)
