@@ -1,0 +1,171 @@
+<SEC-DOCUMENT>0001179110-20-005291.txt : 20200430
+<SEC-HEADER>0001179110-20-005291.hdr.sgml : 20200430
+<ACCEPTANCE-DATETIME>20200430183428
+ACCESSION NUMBER:		0001179110-20-005291
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20200428
+FILED AS OF DATE:		20200430
+DATE AS OF CHANGE:		20200430
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			WOODGRIFT RANDEL WILLIAM
+		CENTRAL INDEX KEY:			0001204554
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-02189
+		FILM NUMBER:		20837617
+
+	MAIL ADDRESS:	
+		STREET 1:		100 ABBOTT PARK ROAD
+		CITY:			ABBOTT PARK
+		STATE:			IL
+		ZIP:			60064
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			ABBOTT LABORATORIES
+		CENTRAL INDEX KEY:			0000001800
+		STANDARD INDUSTRIAL CLASSIFICATION:	PHARMACEUTICAL PREPARATIONS [2834]
+		IRS NUMBER:				360698440
+		STATE OF INCORPORATION:			IL
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		STREET 1:		100 ABBOTT PARK ROAD
+		CITY:			ABBOTT PARK
+		STATE:			IL
+		ZIP:			60064-3500
+		BUSINESS PHONE:		2246676100
+
+	MAIL ADDRESS:	
+		STREET 1:		100 ABBOTT PARK ROAD
+		CITY:			ABBOTT PARK
+		STATE:			IL
+		ZIP:			60064-3500
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>edgar.xml
+<DESCRIPTION>FORM 4 -
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0306</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2020-04-28</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0000001800</issuerCik>
+        <issuerName>ABBOTT LABORATORIES</issuerName>
+        <issuerTradingSymbol>ABT</issuerTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001204554</rptOwnerCik>
+            <rptOwnerName>WOODGRIFT RANDEL WILLIAM</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerStreet1>100 ABBOTT PARK ROAD</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>ABBOTT PARK</rptOwnerCity>
+            <rptOwnerState>IL</rptOwnerState>
+            <rptOwnerZipCode>60064</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>0</isDirector>
+            <isOfficer>1</isOfficer>
+            <isTenPercentOwner>0</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle>Senior Vice President</officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common shares without par value</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2020-04-28</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>3724</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>93.1827</value>
+                    <footnoteId id="F1"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>48767</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+        <nonDerivativeHolding>
+            <securityTitle>
+                <value>Common shares without par value</value>
+            </securityTitle>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>2920</value>
+                    <footnoteId id="F2"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>Profit Sharing Trust</value>
+                </natureOfOwnership>
+            </ownershipNature>
+        </nonDerivativeHolding>
+    </nonDerivativeTable>
+
+    <derivativeTable></derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">The price reported in Column 4 is a weighted average price. These shares were sold in multiple transactions at prices ranging from $93.17 to $93.274, inclusive. The reporting person undertakes to provide to Abbott Laboratories, any security holder of Abbott Laboratories, or the staff of the Securities and Exchange Commission, upon request, full information regarding the number of shares sold at each separate price within the ranges set forth in this footnote.</footnote>
+        <footnote id="F2">Balance in the Abbott Laboratories Stock Retirement Trust as of April 28, 2020.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>Jessica H. Paik, by power of attorney for Randel William Woodgrift</signatureName>
+        <signatureDate>2020-04-30</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

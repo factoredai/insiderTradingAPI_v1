@@ -1,0 +1,150 @@
+<SEC-DOCUMENT>0001179110-20-005551.txt : 20200507
+<SEC-HEADER>0001179110-20-005551.hdr.sgml : 20200507
+<ACCEPTANCE-DATETIME>20200507170124
+ACCESSION NUMBER:		0001179110-20-005551
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20200505
+FILED AS OF DATE:		20200507
+DATE AS OF CHANGE:		20200507
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			RICHMOND TIMOTHY J.
+		CENTRAL INDEX KEY:			0001563523
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-35565
+		FILM NUMBER:		20857432
+
+	MAIL ADDRESS:	
+		STREET 1:		1 N. WAUKEGAN ROAD
+		CITY:			NORTH CHICAGO
+		STATE:			IL
+		ZIP:			60064
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			AbbVie Inc.
+		CENTRAL INDEX KEY:			0001551152
+		STANDARD INDUSTRIAL CLASSIFICATION:	PHARMACEUTICAL PREPARATIONS [2834]
+		IRS NUMBER:				320375147
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		STREET 1:		1 NORTH WAUKEGAN ROAD
+		CITY:			NORTH CHICAGO
+		STATE:			IL
+		ZIP:			60064
+		BUSINESS PHONE:		(847) 932-7900
+
+	MAIL ADDRESS:	
+		STREET 1:		1 NORTH WAUKEGAN ROAD
+		CITY:			NORTH CHICAGO
+		STATE:			IL
+		ZIP:			60064
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>edgar.xml
+<DESCRIPTION>FORM 4 -
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0306</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2020-05-05</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0001551152</issuerCik>
+        <issuerName>AbbVie Inc.</issuerName>
+        <issuerTradingSymbol>ABBV</issuerTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001563523</rptOwnerCik>
+            <rptOwnerName>RICHMOND TIMOTHY J.</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerStreet1>1 N. WAUKEGAN ROAD</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>NORTH CHICAGO</rptOwnerCity>
+            <rptOwnerState>IL</rptOwnerState>
+            <rptOwnerZipCode>60064</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>0</isDirector>
+            <isOfficer>1</isOfficer>
+            <isTenPercentOwner>0</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle>EVP, Chief HR Officer</officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock, $0.01 par value</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2020-05-05</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>19445</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>85.00</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>0</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <derivativeTable></derivativeTable>
+
+    <footnotes></footnotes>
+
+    <remarks>This sale was made pursuant to a previously adopted plan complying with Rule 10b5-1(c).</remarks>
+
+    <ownerSignature>
+        <signatureName>Steven L. Scrogham, attorney-in-fact for Timothy J. Richmond</signatureName>
+        <signatureDate>2020-05-07</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

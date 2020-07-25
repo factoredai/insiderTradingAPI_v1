@@ -1,0 +1,186 @@
+<SEC-DOCUMENT>0001179110-20-002902.txt : 20200303
+<SEC-HEADER>0001179110-20-002902.hdr.sgml : 20200303
+<ACCEPTANCE-DATETIME>20200303172139
+ACCESSION NUMBER:		0001179110-20-002902
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20200228
+FILED AS OF DATE:		20200303
+DATE AS OF CHANGE:		20200303
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			DALE MICHAEL D
+		CENTRAL INDEX KEY:			0001172346
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			1231
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-02189
+		FILM NUMBER:		20683867
+
+	MAIL ADDRESS:	
+		STREET 1:		1350 ENERGY LANE SUITE 110
+		CITY:			ST PAUL
+		STATE:			MN
+		ZIP:			55108
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			ABBOTT LABORATORIES
+		CENTRAL INDEX KEY:			0000001800
+		STANDARD INDUSTRIAL CLASSIFICATION:	PHARMACEUTICAL PREPARATIONS [2834]
+		IRS NUMBER:				360698440
+		STATE OF INCORPORATION:			IL
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		STREET 1:		100 ABBOTT PARK ROAD
+		CITY:			ABBOTT PARK
+		STATE:			IL
+		ZIP:			60064-3500
+		BUSINESS PHONE:		2246676100
+
+	MAIL ADDRESS:	
+		STREET 1:		100 ABBOTT PARK ROAD
+		CITY:			ABBOTT PARK
+		STATE:			IL
+		ZIP:			60064-3500
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>edgar.xml
+<DESCRIPTION>FORM 4 -
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0306</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2020-02-28</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0000001800</issuerCik>
+        <issuerName>ABBOTT LABORATORIES</issuerName>
+        <issuerTradingSymbol>ABT</issuerTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001172346</rptOwnerCik>
+            <rptOwnerName>DALE MICHAEL D</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerStreet1>100 ABBOTT PARK ROAD</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>ABBOTT PARK</rptOwnerCity>
+            <rptOwnerState>IL</rptOwnerState>
+            <rptOwnerZipCode>60064</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>0</isDirector>
+            <isOfficer>1</isOfficer>
+            <isTenPercentOwner>0</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle>Senior Vice President</officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common shares without par value</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2020-02-28</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>F</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>2147</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>79.19</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>35550</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common shares without par value</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2020-03-02</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>787</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>77.89</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>34763</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <derivativeTable></derivativeTable>
+
+    <footnotes></footnotes>
+
+    <remarks>The sale transaction was made pursuant to a previously adopted plan complying with Rule 10b5-1(c).</remarks>
+
+    <ownerSignature>
+        <signatureName>Jessica H. Paik, by power of attorney for Michael D. Dale</signatureName>
+        <signatureDate>2020-03-03</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

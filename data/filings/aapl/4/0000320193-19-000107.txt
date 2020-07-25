@@ -1,0 +1,348 @@
+<SEC-DOCUMENT>0000320193-19-000107.txt : 20191003
+<SEC-HEADER>0000320193-19-000107.hdr.sgml : 20191003
+<ACCEPTANCE-DATETIME>20191003183322
+ACCESSION NUMBER:		0000320193-19-000107
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20191001
+FILED AS OF DATE:		20191003
+DATE AS OF CHANGE:		20191003
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			WILLIAMS JEFFREY E
+		CENTRAL INDEX KEY:			0001496686
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-36743
+		FILM NUMBER:		191137131
+
+	MAIL ADDRESS:	
+		STREET 1:		ONE INFINITE LOOP
+		CITY:			CUPERTINO
+		STATE:			CA
+		ZIP:			95014
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			Apple Inc.
+		CENTRAL INDEX KEY:			0000320193
+		STANDARD INDUSTRIAL CLASSIFICATION:	ELECTRONIC COMPUTERS [3571]
+		IRS NUMBER:				942404110
+		STATE OF INCORPORATION:			CA
+		FISCAL YEAR END:			0930
+
+	BUSINESS ADDRESS:	
+		STREET 1:		ONE APPLE PARK WAY
+		CITY:			CUPERTINO
+		STATE:			CA
+		ZIP:			95014
+		BUSINESS PHONE:		(408) 996-1010
+
+	MAIL ADDRESS:	
+		STREET 1:		ONE APPLE PARK WAY
+		CITY:			CUPERTINO
+		STATE:			CA
+		ZIP:			95014
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	APPLE INC
+		DATE OF NAME CHANGE:	20070109
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	APPLE COMPUTER INC
+		DATE OF NAME CHANGE:	19970808
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>wf-form4_157014197957378.xml
+<DESCRIPTION>FORM 4
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0306</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2019-10-01</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0000320193</issuerCik>
+        <issuerName>Apple Inc.</issuerName>
+        <issuerTradingSymbol>AAPL</issuerTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001496686</rptOwnerCik>
+            <rptOwnerName>WILLIAMS JEFFREY E</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerStreet1>ONE APPLE PARK WAY</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>CUPERTINO</rptOwnerCity>
+            <rptOwnerState>CA</rptOwnerState>
+            <rptOwnerZipCode>95014</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>0</isDirector>
+            <isOfficer>1</isOfficer>
+            <isTenPercentOwner>0</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle>COO</officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2019-10-01</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>M</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>129308</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <footnoteId id="F1"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>237517</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+                <footnoteId id="F2"/>
+            </securityTitle>
+            <transactionDate>
+                <value>2019-10-01</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>F</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>61754</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>224.59</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>175763</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+                <footnoteId id="F3"/>
+            </securityTitle>
+            <transactionDate>
+                <value>2019-10-02</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>24601</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>218.62</value>
+                    <footnoteId id="F4"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>151162</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+                <footnoteId id="F3"/>
+            </securityTitle>
+            <transactionDate>
+                <value>2019-10-02</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>S</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>42953</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>219.28</value>
+                    <footnoteId id="F5"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>108209</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+        <nonDerivativeHolding>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>13986</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>By Trust</value>
+                </natureOfOwnership>
+            </ownershipNature>
+        </nonDerivativeHolding>
+    </nonDerivativeTable>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Restricted Stock Unit</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F1"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2019-10-01</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>M</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>129308</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <footnoteId id="F1"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F6"/>
+                <footnoteId id="F7"/>
+                <footnoteId id="F8"/>
+                <footnoteId id="F9"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F6"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>129308.0</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>0</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Each restricted stock unit (RSU) represented the right to receive, at settlement, one share of common stock. This transaction represents the settlement of RSUs in shares of common stock on their scheduled vesting date.</footnote>
+        <footnote id="F2">Shares withheld by Apple to satisfy the tax withholding requirements on vesting of RSUs.</footnote>
+        <footnote id="F3">This transaction was made pursuant to a Rule 10b5-1 trading plan adopted by the reporting person on February 18, 2019.</footnote>
+        <footnote id="F4">This transaction was executed in multiple trades at prices ranging from $217.98 to $218.97; the price reported above reflects the weighted average sale price. The reporting person hereby undertakes to provide full information regarding the number of shares and prices at which the transactions were effected upon request to the SEC staff, Apple, or a security holder of Apple.</footnote>
+        <footnote id="F5">This transaction was executed in multiple trades at prices ranging from $218.98 to $219.93; the price reported above reflects the weighted average sale price. The reporting person hereby undertakes to provide full information regarding the number of shares and prices at which the transactions were effected upon request to the SEC staff, Apple, or a security holder of Apple.</footnote>
+        <footnote id="F6">This award was granted on October 14, 2016, for a target number of 64,654 RSUs. The award vested on October 1, 2019, applying a percentage of the target number of RSUs that was determined based on Apple's total shareholder return (TSR) relative to the other companies in the S&amp;P 500 from September 25, 2016 through September 28, 2019.</footnote>
+        <footnote id="F7">TSR is calculated based on the change in a company's stock price during the three-year period, taking into account any dividends paid during that period, which are assumed to be reinvested in the stock. In accordance with the terms of the award, the beginning value used for calculating TSR is the average closing stock price for the 20 trading days prior to September 25, 2016. Apple's beginning value was calculated to be $109.44. Similarly, the ending value used for calculating TSR is the average closing price for the 20 trading days ending on September 28, 2019. Apple's ending value was calculated to be $227.94 (adjusted for dividends).</footnote>
+        <footnote id="F8">This award provided that if Apple's relative TSR performance was ranked at or above the 85th percentile for companies in the S&amp;P 500 for the performance period, 200% of the target number of RSUs vest. If Apple's performance was ranked at or above the 55th percentile, 100% of the target number of RSUs vest. If Apple's performance was ranked at or above the 25th percentile, 25% of the target number of RSUs vest, and if Apple's performance was ranked below the 25th percentile, 0% of the target number of RSUs vest. If Apple's performance was between these levels, the portion of the RSUs that vest would be determined on a straight-line basis (i.e., linearly interpolated) between the two nearest vesting percentages.</footnote>
+        <footnote id="F9">Apple's TSR for the three-year period was 108.28%, which ranked 35th of the 464 companies that were included in the S&amp;P 500 for the period and placed Apple in the 93rd percentile. Therefore, 129,308 RSUs subject to performance requirements vested.</footnote>
+    </footnotes>
+
+    <remarks></remarks>
+
+    <ownerSignature>
+        <signatureName>/s/ Sam Whittington, Attorney-in-Fact for Jeffrey E. Williams</signatureName>
+        <signatureDate>2019-10-03</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

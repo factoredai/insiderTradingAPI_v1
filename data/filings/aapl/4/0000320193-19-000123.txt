@@ -1,0 +1,252 @@
+<SEC-DOCUMENT>0000320193-19-000123.txt : 20191114
+<SEC-HEADER>0000320193-19-000123.hdr.sgml : 20191114
+<ACCEPTANCE-DATETIME>20191114183103
+ACCESSION NUMBER:		0000320193-19-000123
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20191113
+FILED AS OF DATE:		20191114
+DATE AS OF CHANGE:		20191114
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			Adams Katherine L.
+		CENTRAL INDEX KEY:			0001462356
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-36743
+		FILM NUMBER:		191221953
+
+	MAIL ADDRESS:	
+		STREET 1:		APPLE INC.
+		STREET 2:		1 INFINITE LOOP
+		CITY:			CUPERTINO
+		STATE:			CA
+		ZIP:			95014
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			Apple Inc.
+		CENTRAL INDEX KEY:			0000320193
+		STANDARD INDUSTRIAL CLASSIFICATION:	ELECTRONIC COMPUTERS [3571]
+		IRS NUMBER:				942404110
+		STATE OF INCORPORATION:			CA
+		FISCAL YEAR END:			0928
+
+	BUSINESS ADDRESS:	
+		STREET 1:		ONE APPLE PARK WAY
+		CITY:			CUPERTINO
+		STATE:			CA
+		ZIP:			95014
+		BUSINESS PHONE:		(408) 996-1010
+
+	MAIL ADDRESS:	
+		STREET 1:		ONE APPLE PARK WAY
+		CITY:			CUPERTINO
+		STATE:			CA
+		ZIP:			95014
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	APPLE INC
+		DATE OF NAME CHANGE:	20070109
+
+	FORMER COMPANY:	
+		FORMER CONFORMED NAME:	APPLE COMPUTER INC
+		DATE OF NAME CHANGE:	19970808
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>wf-form4_157377424820890.xml
+<DESCRIPTION>FORM 4
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0306</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2019-11-13</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0000320193</issuerCik>
+        <issuerName>Apple Inc.</issuerName>
+        <issuerTradingSymbol>AAPL</issuerTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001462356</rptOwnerCik>
+            <rptOwnerName>Adams Katherine L.</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerStreet1>ONE APPLE PARK WAY</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>CUPERTINO</rptOwnerCity>
+            <rptOwnerState>CA</rptOwnerState>
+            <rptOwnerZipCode>95014</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>0</isDirector>
+            <isOfficer>1</isOfficer>
+            <isTenPercentOwner>0</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle>SVP, GC and Secretary</officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2019-11-13</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>M</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>14370</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <footnoteId id="F1"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>30010</value>
+                    <footnoteId id="F2"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common Stock</value>
+                <footnoteId id="F3"/>
+            </securityTitle>
+            <transactionDate>
+                <value>2019-11-13</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>F</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>7371</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>264.47</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>22639</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Restricted Stock Unit</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <footnoteId id="F1"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2019-11-13</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>M</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>14370</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <footnoteId id="F1"/>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F4"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F4"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>14370.0</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>14370</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Each restricted stock unit represents the right to receive, at settlement, one share of common stock. This transaction represents the settlement of restricted stock units in shares of common stock on their scheduled vesting date.</footnote>
+        <footnote id="F2">The number of securities reported reflects the acquisition on January 31, 2019 of 124 shares of Apple Inc.'s common stock pursuant to the Apple Inc. Amended Employee Stock Purchase Plan (&quot;ESPP&quot;) for the ESPP purchase period of August 1, 2018 through January 31, 2019.</footnote>
+        <footnote id="F3">Shares withheld by Apple to satisfy tax withholding requirements on vesting of restricted stock units.  No shares were sold.</footnote>
+        <footnote id="F4">This award was granted on November 13, 2017. 14,371 restricted stock units subject to the award vested on each of May 13, 2018 and November 13, 2018 and 14,370 vested on November 13, 2019.  14,370 restricted stock units are scheduled to vest on November 13, 2020, assuming continued employment through the applicable vesting date.</footnote>
+    </footnotes>
+
+    <remarks></remarks>
+
+    <ownerSignature>
+        <signatureName>/s/ Sam Whittington, Attorney-in-Fact for Katherine L. Adams</signatureName>
+        <signatureDate>2019-11-14</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

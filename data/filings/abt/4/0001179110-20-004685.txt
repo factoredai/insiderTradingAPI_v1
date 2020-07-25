@@ -1,0 +1,208 @@
+<SEC-DOCUMENT>0001179110-20-004685.txt : 20200403
+<SEC-HEADER>0001179110-20-004685.hdr.sgml : 20200403
+<ACCEPTANCE-DATETIME>20200403182508
+ACCESSION NUMBER:		0001179110-20-004685
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20200401
+FILED AS OF DATE:		20200403
+DATE AS OF CHANGE:		20200403
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			LANE ANDREW H
+		CENTRAL INDEX KEY:			0001643735
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-02189
+		FILM NUMBER:		20775263
+
+	MAIL ADDRESS:	
+		STREET 1:		100 ABBOTT PARK ROAD
+		STREET 2:		AP6A-2, D-032L
+		CITY:			ABBOTT PARK
+		STATE:			IL
+		ZIP:			60064-6092
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			ABBOTT LABORATORIES
+		CENTRAL INDEX KEY:			0000001800
+		STANDARD INDUSTRIAL CLASSIFICATION:	PHARMACEUTICAL PREPARATIONS [2834]
+		IRS NUMBER:				360698440
+		STATE OF INCORPORATION:			IL
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		STREET 1:		100 ABBOTT PARK ROAD
+		CITY:			ABBOTT PARK
+		STATE:			IL
+		ZIP:			60064-3500
+		BUSINESS PHONE:		2246676100
+
+	MAIL ADDRESS:	
+		STREET 1:		100 ABBOTT PARK ROAD
+		CITY:			ABBOTT PARK
+		STATE:			IL
+		ZIP:			60064-3500
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>edgar.xml
+<DESCRIPTION>FORM 4 -
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0306</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2020-04-01</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0000001800</issuerCik>
+        <issuerName>ABBOTT LABORATORIES</issuerName>
+        <issuerTradingSymbol>ABT</issuerTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001643735</rptOwnerCik>
+            <rptOwnerName>LANE ANDREW H</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerStreet1>100 ABBOTT PARK ROAD</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>ABBOTT PARK</rptOwnerCity>
+            <rptOwnerState>IL</rptOwnerState>
+            <rptOwnerZipCode>60064</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>0</isDirector>
+            <isOfficer>1</isOfficer>
+            <isTenPercentOwner>0</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle>Executive Vice President</officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common shares without par value</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2020-04-01</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>1659</value>
+                    <footnoteId id="F1"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>66187</value>
+                    <footnoteId id="F2"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common shares without par value</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2020-04-01</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>F</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>365</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>78.91</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>D</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>65822</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+        <nonDerivativeHolding>
+            <securityTitle>
+                <value>Common shares without par value</value>
+            </securityTitle>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>1375</value>
+                    <footnoteId id="F3"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>I</value>
+                </directOrIndirectOwnership>
+                <natureOfOwnership>
+                    <value>Profit Sharing Trust</value>
+                </natureOfOwnership>
+            </ownershipNature>
+        </nonDerivativeHolding>
+    </nonDerivativeTable>
+
+    <derivativeTable></derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Settlement of performance-based restricted stock units in shares in a transaction exempt from Section 16(b) under Rule 16b-3.</footnote>
+        <footnote id="F2">Includes shares acquired pursuant to a dividend reinvestment feature.</footnote>
+        <footnote id="F3">Balance in the Abbott Laboratories Stock Retirement Trust as of April 1, 2020.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>Jessica H. Paik, by power of attorney for Andrew H. Lane</signatureName>
+        <signatureDate>2020-04-03</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

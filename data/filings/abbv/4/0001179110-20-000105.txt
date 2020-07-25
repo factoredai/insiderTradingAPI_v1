@@ -1,0 +1,171 @@
+<SEC-DOCUMENT>0001179110-20-000105.txt : 20200103
+<SEC-HEADER>0001179110-20-000105.hdr.sgml : 20200103
+<ACCEPTANCE-DATETIME>20200103124127
+ACCESSION NUMBER:		0001179110-20-000105
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20191231
+FILED AS OF DATE:		20200103
+DATE AS OF CHANGE:		20200103
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			Alpern Robert J
+		CENTRAL INDEX KEY:			0001448074
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-35565
+		FILM NUMBER:		20504153
+
+	MAIL ADDRESS:	
+		STREET 1:		YALE SCHOOL OF MEDICINE
+		STREET 2:		333 CEDAR STREET, C203 SHM
+		CITY:			NEW HAVEN
+		STATE:			CT
+		ZIP:			06520
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			AbbVie Inc.
+		CENTRAL INDEX KEY:			0001551152
+		STANDARD INDUSTRIAL CLASSIFICATION:	PHARMACEUTICAL PREPARATIONS [2834]
+		IRS NUMBER:				320375147
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		STREET 1:		1 NORTH WAUKEGAN ROAD
+		CITY:			NORTH CHICAGO
+		STATE:			IL
+		ZIP:			60064
+		BUSINESS PHONE:		(847) 932-7900
+
+	MAIL ADDRESS:	
+		STREET 1:		1 NORTH WAUKEGAN ROAD
+		CITY:			NORTH CHICAGO
+		STATE:			IL
+		ZIP:			60064
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>edgar.xml
+<DESCRIPTION>FORM 4 -
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0306</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2019-12-31</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0001551152</issuerCik>
+        <issuerName>AbbVie Inc.</issuerName>
+        <issuerTradingSymbol>ABBV</issuerTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001448074</rptOwnerCik>
+            <rptOwnerName>Alpern Robert J</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerStreet1>1 N. WAUKEGAN ROAD</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>NORTH CHICAGO</rptOwnerCity>
+            <rptOwnerState>IL</rptOwnerState>
+            <rptOwnerZipCode>60064</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>1</isDirector>
+            <isOfficer>0</isOfficer>
+            <isTenPercentOwner>0</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle></officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <nonDerivativeTable></nonDerivativeTable>
+
+    <derivativeTable>
+        <derivativeTransaction>
+            <securityTitle>
+                <value>Stock Equivalent Unites</value>
+            </securityTitle>
+            <conversionOrExercisePrice>
+                <value>0</value>
+                <footnoteId id="F1"/>
+            </conversionOrExercisePrice>
+            <transactionDate>
+                <value>2019-12-31</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>77</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>88.54</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <exerciseDate>
+                <footnoteId id="F1"/>
+            </exerciseDate>
+            <expirationDate>
+                <footnoteId id="F1"/>
+            </expirationDate>
+            <underlyingSecurity>
+                <underlyingSecurityTitle>
+                    <value>Common Stock</value>
+                </underlyingSecurityTitle>
+                <underlyingSecurityShares>
+                    <value>77</value>
+                </underlyingSecurityShares>
+            </underlyingSecurity>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>6933</value>
+                    <footnoteId id="F2"/>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </derivativeTransaction>
+    </derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">Director fees credited to stock equivalent unit accounts under grantor trusts established by the director at Abbott Laboratories and AbbVie. The stock equivalent units in the Abbott account will be paid, in cash, generally at age 65 or upon retirement from Abbott's board, and the stock equivalent units in the AbbVie account will be paid, in cash, generally at age 65 or upon retirement from AbbVie's board. The stock equivalent units in each account earn the same return as if the fees were invested in AbbVie stock.</footnote>
+        <footnote id="F2">Balance includes stock equivalent units acquired pursuant to a dividend reinvestment feature.</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>Steven L. Scrogham, attorney-in-fact for Robert J. Alpern</signatureName>
+        <signatureDate>2020-01-03</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

@@ -1,0 +1,148 @@
+<SEC-DOCUMENT>0001179110-19-009960.txt : 20190830
+<SEC-HEADER>0001179110-19-009960.hdr.sgml : 20190830
+<ACCEPTANCE-DATETIME>20190830160801
+ACCESSION NUMBER:		0001179110-19-009960
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20190829
+FILED AS OF DATE:		20190830
+DATE AS OF CHANGE:		20190830
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			Donoghoe Nicholas
+		CENTRAL INDEX KEY:			0001762951
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-35565
+		FILM NUMBER:		191069636
+
+	MAIL ADDRESS:	
+		STREET 1:		1 NORTH WAUKEGAN ROAD
+		CITY:			NORTH CHICAGO
+		STATE:			IL
+		ZIP:			60064
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			AbbVie Inc.
+		CENTRAL INDEX KEY:			0001551152
+		STANDARD INDUSTRIAL CLASSIFICATION:	PHARMACEUTICAL PREPARATIONS [2834]
+		IRS NUMBER:				320375147
+		STATE OF INCORPORATION:			DE
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		STREET 1:		1 NORTH WAUKEGAN ROAD
+		CITY:			NORTH CHICAGO
+		STATE:			IL
+		ZIP:			60064
+		BUSINESS PHONE:		(847) 932-7900
+
+	MAIL ADDRESS:	
+		STREET 1:		1 NORTH WAUKEGAN ROAD
+		CITY:			NORTH CHICAGO
+		STATE:			IL
+		ZIP:			60064
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>edgar.xml
+<DESCRIPTION>FORM 4 -
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0306</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2019-08-29</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0001551152</issuerCik>
+        <issuerName>AbbVie Inc.</issuerName>
+        <issuerTradingSymbol>ABBV</issuerTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001762951</rptOwnerCik>
+            <rptOwnerName>Donoghoe Nicholas</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerStreet1>1 NORTH WAUKEGAN ROAD</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>NORTH CHICAGO</rptOwnerCity>
+            <rptOwnerState>IL</rptOwnerState>
+            <rptOwnerZipCode>60064</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>0</isDirector>
+            <isOfficer>1</isOfficer>
+            <isTenPercentOwner>0</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle>SVP, Enterprise Innovation</officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common stock, $0.01 par value</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2019-08-29</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>P</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>7525</value>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>66.187</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>13090</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <derivativeTable></derivativeTable>
+
+    <footnotes></footnotes>
+
+    <ownerSignature>
+        <signatureName>Steven L. Scrogham, attorney-in-fact for Nicholas R. Donoghoe</signatureName>
+        <signatureDate>2019-08-30</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>

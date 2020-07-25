@@ -1,0 +1,151 @@
+<SEC-DOCUMENT>0001179110-20-005183.txt : 20200428
+<SEC-HEADER>0001179110-20-005183.hdr.sgml : 20200428
+<ACCEPTANCE-DATETIME>20200428172337
+ACCESSION NUMBER:		0001179110-20-005183
+CONFORMED SUBMISSION TYPE:	4
+PUBLIC DOCUMENT COUNT:		1
+CONFORMED PERIOD OF REPORT:	20200424
+FILED AS OF DATE:		20200428
+DATE AS OF CHANGE:		20200428
+
+REPORTING-OWNER:	
+
+	OWNER DATA:	
+		COMPANY CONFORMED NAME:			McDew Darren W
+		CENTRAL INDEX KEY:			0001787479
+
+	FILING VALUES:
+		FORM TYPE:		4
+		SEC ACT:		1934 Act
+		SEC FILE NUMBER:	001-02189
+		FILM NUMBER:		20826264
+
+	MAIL ADDRESS:	
+		STREET 1:		100 ABBOTT PARK ROAD
+		CITY:			ABBOTT PARK
+		STATE:			IL
+		ZIP:			60064
+
+ISSUER:		
+
+	COMPANY DATA:	
+		COMPANY CONFORMED NAME:			ABBOTT LABORATORIES
+		CENTRAL INDEX KEY:			0000001800
+		STANDARD INDUSTRIAL CLASSIFICATION:	PHARMACEUTICAL PREPARATIONS [2834]
+		IRS NUMBER:				360698440
+		STATE OF INCORPORATION:			IL
+		FISCAL YEAR END:			1231
+
+	BUSINESS ADDRESS:	
+		STREET 1:		100 ABBOTT PARK ROAD
+		CITY:			ABBOTT PARK
+		STATE:			IL
+		ZIP:			60064-3500
+		BUSINESS PHONE:		2246676100
+
+	MAIL ADDRESS:	
+		STREET 1:		100 ABBOTT PARK ROAD
+		CITY:			ABBOTT PARK
+		STATE:			IL
+		ZIP:			60064-3500
+</SEC-HEADER>
+<DOCUMENT>
+<TYPE>4
+<SEQUENCE>1
+<FILENAME>edgar.xml
+<DESCRIPTION>FORM 4 -
+<TEXT>
+<XML>
+<?xml version="1.0"?>
+<ownershipDocument>
+
+    <schemaVersion>X0306</schemaVersion>
+
+    <documentType>4</documentType>
+
+    <periodOfReport>2020-04-24</periodOfReport>
+
+    <notSubjectToSection16>0</notSubjectToSection16>
+
+    <issuer>
+        <issuerCik>0000001800</issuerCik>
+        <issuerName>ABBOTT LABORATORIES</issuerName>
+        <issuerTradingSymbol>ABT</issuerTradingSymbol>
+    </issuer>
+
+    <reportingOwner>
+        <reportingOwnerId>
+            <rptOwnerCik>0001787479</rptOwnerCik>
+            <rptOwnerName>McDew Darren W</rptOwnerName>
+        </reportingOwnerId>
+        <reportingOwnerAddress>
+            <rptOwnerStreet1>100 ABBOTT PARK ROAD</rptOwnerStreet1>
+            <rptOwnerStreet2></rptOwnerStreet2>
+            <rptOwnerCity>ABBOTT PARK</rptOwnerCity>
+            <rptOwnerState>IL</rptOwnerState>
+            <rptOwnerZipCode>60064</rptOwnerZipCode>
+            <rptOwnerStateDescription></rptOwnerStateDescription>
+        </reportingOwnerAddress>
+        <reportingOwnerRelationship>
+            <isDirector>1</isDirector>
+            <isOfficer>0</isOfficer>
+            <isTenPercentOwner>0</isTenPercentOwner>
+            <isOther>0</isOther>
+            <officerTitle></officerTitle>
+            <otherText></otherText>
+        </reportingOwnerRelationship>
+    </reportingOwner>
+
+    <nonDerivativeTable>
+        <nonDerivativeTransaction>
+            <securityTitle>
+                <value>Common shares without par value</value>
+            </securityTitle>
+            <transactionDate>
+                <value>2020-04-24</value>
+            </transactionDate>
+            <transactionCoding>
+                <transactionFormType>4</transactionFormType>
+                <transactionCode>A</transactionCode>
+                <equitySwapInvolved>0</equitySwapInvolved>
+            </transactionCoding>
+            <transactionAmounts>
+                <transactionShares>
+                    <value>1974</value>
+                    <footnoteId id="F1"/>
+                </transactionShares>
+                <transactionPricePerShare>
+                    <value>0</value>
+                </transactionPricePerShare>
+                <transactionAcquiredDisposedCode>
+                    <value>A</value>
+                </transactionAcquiredDisposedCode>
+            </transactionAmounts>
+            <postTransactionAmounts>
+                <sharesOwnedFollowingTransaction>
+                    <value>1974</value>
+                </sharesOwnedFollowingTransaction>
+            </postTransactionAmounts>
+            <ownershipNature>
+                <directOrIndirectOwnership>
+                    <value>D</value>
+                </directOrIndirectOwnership>
+            </ownershipNature>
+        </nonDerivativeTransaction>
+    </nonDerivativeTable>
+
+    <derivativeTable></derivativeTable>
+
+    <footnotes>
+        <footnote id="F1">These are restricted stock units awarded under the Abbott Laboratories 2017 Incentive Stock Program (the &quot;Program&quot;). They will be paid, on a one-to-one basis, in Abbott common shares on the earlier of the date of the director's separation from service, death, or the occurrence of a change in control (as defined in the Program).</footnote>
+    </footnotes>
+
+    <ownerSignature>
+        <signatureName>Jessica H. Paik, by power of attorney for Darren W. McDew</signatureName>
+        <signatureDate>2020-04-28</signatureDate>
+    </ownerSignature>
+</ownershipDocument>
+</XML>
+</TEXT>
+</DOCUMENT>
+</SEC-DOCUMENT>
