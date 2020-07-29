@@ -133,4 +133,5 @@ dmypy.json
 *.pkl
 *.txt
 *.zip
+*.tar
 !top40_sp500.csv

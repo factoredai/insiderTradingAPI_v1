@@ -1,17 +1,8 @@
 from datetime import datetime
-from secedgar.filings import Filing, FilingType
 import os
-import xml.etree.ElementTree as ET
 import pandas as pd
-import numpy as np
-import yfinance as yf
-import matplotlib.pyplot as plt
 
-from api_utils import (create_dir, make_patch_spines_invisible, create_ticker2name,
-                       create_combined_data, download_filing_4,
-                       InsiderAggregators, calculate_aggregates_per_insider,
-                       read_all_form_4,
-                       visualization_insider_stock)
+from api_utils import (create_dir, download_filing_4)
 
 
 if __name__ == "__main__":

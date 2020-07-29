@@ -1,24 +1,24 @@
-import sys
-
 from fastapi import FastAPI, Response
 from fastapi.responses import FileResponse
-import finviz
 import pandas as pd
-import numpy as np
-import quandl
-import yfinance as yf
-import matplotlib.pyplot as plt
 import os
 
 from api.resources import generate_plot
-from api.api_utils import read_all_form_4, create_ticker2name, create_combined_data, calculate_aggregates_per_insider
+from api.api_utils import (read_all_form_4, create_ticker2name,
+                           create_combined_data,
+                           calculate_aggregates_per_insider)
 
 app = FastAPI()
 
 # Setup the Api resource routing here
 # Route the URL to the resource
 data_filings_path = os.path.join("data", "filings")
-data = read_all_form_4(data_filings_path)
+data_extracted_filename = os.path.join("data", "data.csv")
+if not(os.path.exists(data_extracted_filename)):
+    data = read_all_form_4(data_filings_path)
+    data.to_csv(data_extracted_filename, index=False, header=True)
+else:
+    data = pd.read_csv(data_extracted_filename, header=0)
 ticker2name = create_ticker2name(data)
 dict_frames = create_combined_data(data)
 

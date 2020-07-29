@@ -7,9 +7,22 @@ import numpy as np
 import yfinance as yf
 import matplotlib.pyplot as plt
 import matplotlib
-matplotlib.rcParams["axes.formatter.limits"] = -4, 3
-matplotlib.rcParams["legend.fancybox"] = True
-matplotlib.rcParams["legend.framealpha"] = 0.5
+
+# Params mpl
+font = {'weight': 'bold',
+        'size': 12}
+size = 15
+params = {'legend.fontsize': size*0.7,
+          'figure.figsize': (20, 8),
+          'axes.labelsize': size,
+          'axes.titlesize': size,
+          'xtick.labelsize': size*0.9,
+          'ytick.labelsize': size*0.9,
+          'axes.formatter.limits': (-4, 4),
+          'legend.fancybox': True,
+          'legend.framealpha': 0.5,
+          'legend.title_fontsize': size*0.8}
+matplotlib.rcParams.update(params)
 
 
 def create_dir(directory):
@@ -32,7 +45,7 @@ def download_filing_4(symbol, data_filings_path,
                       start_date=datetime(2019, 7, 1),
                       end_date=datetime(2020, 6, 30)):
     """
-    Download Form 4 from SEC. 
+    Download Form 4 from SEC
     Downloads all the info about the form 4 in multiple txt files.
     TODO:
     Look if it overwrites.
@@ -51,8 +64,10 @@ def download_filing_4(symbol, data_filings_path,
 
 
 def read_all_form_4(data_filings_path):
-    data = pd.DataFrame(columns=['transactiondate', 'transactionshares', 'transactionpricepershare',
-                                 'transactioncode', 'officerTitle', 'rptOwnerName', 'issuername', 'ticker'])
+    data = pd.DataFrame(columns=['transactiondate', 'transactionshares',
+                                 'transactionpricepershare',
+                                 'transactioncode', 'officerTitle',
+                                 'rptOwnerName', 'issuername', 'ticker'])
     for company in os.listdir(data_filings_path):
         company_path = os.path.join(data_filings_path, company)
         for form in os.listdir(company_path):
@@ -63,15 +78,17 @@ def read_all_form_4(data_filings_path):
                 sec_form_raw = form_4.read()
                 index_begin = sec_form_raw.find("FORM TYPE")
                 index_end = sec_form_raw.find("SEC ACT")
-                if not(sec_form_raw[index_begin:index_end].split("\t\t")[1].replace("\n", "") == '4'):
-                    #print("Not Form 4 -",file)
+                if not(sec_form_raw[index_begin:index_end].split("\t\t")[1]
+                       .replace("\n", "") == '4'):
+                    # print("Not Form 4 -",file)
                     continue
                 else:
-                    #print("Form 4 -", file)
+                    # print("Form 4 -", file)
                     pass
                 index_begin_xml = sec_form_raw.find('<?xml version="1.0"?>')
                 index_end_xml = sec_form_raw.find('</XML>')
-                sec_form_processed = sec_form_raw[index_begin_xml:index_end_xml]
+                sec_form_processed = sec_form_raw[index_begin_xml:
+                                                  index_end_xml]
 
                 try:
                     root = ET.fromstring(sec_form_processed)
@@ -83,7 +100,11 @@ def read_all_form_4(data_filings_path):
                 for x in root.iter('transactionDate'):
                     row['transactiondate'] = x[0].text
                 for x in root.iter('transactionShares'):
-                    row['transactionshares'] = x[0].text
+                    txt = x[0].text
+                    # if "." in txt:
+                    #     print(company, txt)
+                    #     txt = txt.replace(".", "")
+                    row['transactionshares'] = txt
                 for x in root.iter('transactionPricePerShare'):
                     row['transactionpricepershare'] = x[0].text
                 for x in root.iter('transactionCode'):
@@ -98,24 +119,25 @@ def read_all_form_4(data_filings_path):
                     row['ticker'] = x.text
                 data = data.append(row, ignore_index=True)
     data = data.astype({'transactiondate': np.datetime64,
-                        'transactionshares': np.int64,
+                        'transactionshares': np.float64,
                         'transactionpricepershare': np.float64,
                         'transactioncode': np.dtype('O'),
                         'officerTitle': np.dtype('O'),
                         'rptOwnerName': np.dtype('O'),
                         'issuername': np.dtype('O'),
                         'ticker': np.dtype('O')})
-    data["transactionvalue"] = data["transactionshares"] * data["transactionpricepershare"]
+    data["transactionvalue"] = data["transactionshares"] *\
+        data["transactionpricepershare"]
     return data
 
 
 def create_ticker2name(data):
-    ticker2name = data[["ticker", "issuername"]].drop_duplicates().set_index("ticker").to_dict()[
-        "issuername"]
+    ticker2name = data[["ticker", "issuername"]].drop_duplicates()\
+        .set_index("ticker").to_dict()["issuername"]
     return ticker2name
 
 
-def create_combined_data(data):
+def create_combined_data(data, start=datetime(2019, 7, 21)):
     """
     Combined the insider data with the stock daily information
     """
@@ -125,12 +147,17 @@ def create_combined_data(data):
     for symbol in symbols:
         curr_table = pd.pivot_table(data[data["ticker"] == symbol],
                                     values=["transactionshares",
-                                            "transactionpricepershare", "transactionvalue"],
+                                            "transactionpricepershare",
+                                            "transactionvalue"],
                                     index=['transactiondate'],
-                                    columns=['transactioncode'], aggfunc={"transactionshares": np.sum,
-                                                                          "transactionpricepershare": InsiderAggregators.mean_exclude_le_0,
-                                                                          "transactionvalue": np.sum})
-        curr_table.columns = [code + "_" + transaction for transaction, code in curr_table.columns]
+                                    columns=['transactioncode'],
+                                    aggfunc={"transactionshares": np.sum,
+                                             "transactionpricepershare":
+                                             InsiderAggregators
+                                                 .mean_exclude_le_0,
+                                             "transactionvalue": np.sum})
+        curr_table.columns = [code + "_" + transaction for transaction,
+                              code in curr_table.columns]
         serie = yf.Ticker(symbol)
         stock_df = serie.history(start=data["transactiondate"].min(),
                                  end=data["transactiondate"].max(),
@@ -139,8 +166,8 @@ def create_combined_data(data):
             curr_table, how="left", left_index=True, right_index=True)
         dict_frames[symbol]["Amount_negotiated"] = dict_frames[symbol]["Volume"] * \
             dict_frames[symbol]["Close"]
-        dict_frames[symbol]["Amount_negotiated_MA"] = dict_frames[symbol]["Amount_negotiated"].rolling(
-            5).mean().shift(1)
+        dict_frames[symbol]["Amount_negotiated_MA"] = dict_frames[symbol]["Amount_negotiated"]\
+            .rolling(5).mean().shift(1)
         dict_frames[symbol]["Perc_amount_vs_MA"] = dict_frames[symbol]["Amount_negotiated"]\
             / dict_frames[symbol]["Amount_negotiated_MA"]
         if len(amount_negotiated_avg) < 1:
@@ -154,9 +181,14 @@ def create_combined_data(data):
     return dict_frames
 
 
-def visualization_insider_stock(key, val, ticker2name, save_path=None, from_api=False,
-                                start_date=None, figsize=(15, 10), codes=["S", "P", "M", "A"],
-                                display=["price", "volume", "relative_volume", "amount"]):
+def visualization_insider_stock(key, val, ticker2name, save_path=None,
+                                from_api=False,
+                                start_date=datetime(2019, 7, 21), figsize=(15, 10),
+                                codes=["S", "P", "M", "A"],
+                                display=["price", "volume",
+                                         "relative_volume",
+                                         "amount_ma",
+                                         "sp100"]):
     """
     Plot the insider trading with the stock information
     Parameters:
@@ -187,12 +219,15 @@ def visualization_insider_stock(key, val, ticker2name, save_path=None, from_api=
         "G": {"color": "aqua",
               "label": "Gift",
               "alpha": 0.7}}
-    val = val.drop(columns=["Dividends", "Stock Splits"])
+    if "Dividends" in val.columns:
+        val = val.drop(columns=["Dividends", "Stock Splits"])
     if start_date:
         val = val.loc[val.index >= start_date, :]
     if from_api:
         matplotlib.use('agg')
-    if "amount" in display:
+    if ("amount_ma" in display) and ("sp100" in display):
+        n_plots = 3
+    elif ("amount_ma" in display) or ("sp100" in display):
         n_plots = 2
     else:
         n_plots = 1
@@ -200,27 +235,31 @@ def visualization_insider_stock(key, val, ticker2name, save_path=None, from_api=
     if n_plots > 1:
         ax1 = ax[0]
         ax4 = ax[1]
-        ax4_color = "steelblue"
-        ax4.plot(val["Perc_amount_vs_MA"]*100, color=ax4_color,
-                 label="%Amount traded relative to MA 5 last days")
-        ax4.plot(val["Perc_amount_sp100"]*100, linestyle="--",
-                 color=ax4_color, label="%Amount relative to SP100")
-        ax4.set_ylabel("% Percentage")
-        ax4.legend(loc=2)
+        if ("amount_ma" in display) and ("sp100" in display):
+            ax5 = ax[2]
+            ax4 = plot_ma_5days(ax4, val)
+            ax5 = plot_sp100(ax5, val)
+        elif "amount_ma" in display:
+            ax4 = plot_ma_5days(ax4, val)
+        elif "sp100" in display:
+            ax4 = plot_ma_5days(ax4, val)
+        else:
+            raise SystemExit("Something weird happened about display")
     else:
         ax1 = ax
-
     ax1.plot(val["Close"], color="k")
-    ax1.errorbar(val.index, val["Close"], yerr=[val["Close"]-val["Low"], val["High"]-val["Close"]], fmt=".",
-                 color="k", ecolor='y', capthick=2, label="Close Price (Low/High error)")
+    ax1.errorbar(val.index, val["Close"],
+                 yerr=[val["Close"]-val["Low"], val["High"]-val["Close"]],
+                 fmt=".", color="k", ecolor='y', capthick=2,
+                 label="Close Price (Low/High error)")
     for code in codes:
         if f"{code}_transactionpricepershare" in val.columns:
             label = dict_codes[code]["label"]
             color = dict_codes[code]["color"]
             ax1.plot(val.index, val[f"{code}_transactionpricepershare"],
-                     "o", color=color, label=f"{label} insider price")
+                     "o", color=color, label=f"{label} insider")
     ax1.set_ylabel("Price")
-    ax1.legend(loc=2)
+    ax1.legend(loc=2, title="Price")
 
     if len(display) > 1:
         if "volume" in display:
@@ -233,7 +272,7 @@ def visualization_insider_stock(key, val, ticker2name, save_path=None, from_api=
                     ax2.bar(val.index, val[f"{code}_transactionshares"], 1,
                             alpha=alpha, color=color,
                             label=f"{label} insider")
-            ax2.legend(loc=1)
+            ax2.legend(loc=1, title="Volume")
             ax2.set_ylabel("Volume")
         if "relative_volume" in display:
             ax3 = ax1.twinx()
@@ -245,15 +284,50 @@ def visualization_insider_stock(key, val, ticker2name, save_path=None, from_api=
                 if f"{code}_transactionshares" in val.columns:
                     label = dict_codes[code]["label"]
                     color = dict_codes[code]["color"]
-                    ax3.plot(val.index, np.abs(val[f"{code}_transactionshares"]/val["Volume"]),
-                             "x", color=color, label=f"{label} relative volume")
-            ax3.legend(loc=3)
+                    ax3.plot(val.index,
+                             np.abs(val[f"{code}_transactionshares"] /
+                                    val["Volume"]),
+                             "x", color=color,
+                             label=f"{label} insider")
+            ax3.legend(loc=3, title="Relative Volume")
             ax3.set_ylabel("Relative Volume")
     plt.title(ticker2name[key])
     if save_path is None:
         plt.show()
     else:
         plt.savefig(save_path)
+
+
+def barplot_base_centered(ax, values, base=100, width=0.9, alpha=0.7):
+    values = values - base
+    ax.bar(values[values >= 0].index, values[values >= 0], width=width,
+           color="g", alpha=alpha, zorder=3)
+    ax.bar(values[values < 0].index, values[values < 0], width=width,
+           color="r", alpha=alpha, zorder=4)
+    or_yticks = ax.get_yticks()
+    transformed_ticks = base + or_yticks
+    ax.set_yticklabels(transformed_ticks)
+    return ax
+
+
+def plot_ma_5days(ax, val):
+    delta = 0
+    aux = val["Perc_amount_vs_MA"]*100 - delta
+    threshold = 100 - delta
+    ax = barplot_base_centered(ax, aux, base=threshold)
+    ax.set_ylabel("% Amount traded")
+    ax.legend(loc=2)
+    ax.set_title("%Amount traded relative to 5 last days MA")
+    return ax
+
+
+def plot_sp100(ax, val):
+    color = "steelblue"
+    ax.plot(val["Perc_amount_sp100"]*100, linestyle="-",
+            color=color, label="%Amount traded relative to Avg SP100 Company")
+    ax.set_ylabel("% Amount traded")
+    ax.legend(loc=2)
+    return ax
 
 
 class InsiderAggregators():
@@ -295,7 +369,8 @@ def calculate_aggregates_per_insider(data, ticker):
         .agg({"officerTitle": InsiderAggregators.title,
               "transactionpricepershare": InsiderAggregators.mean_exclude_le_0,
               "transactionshares": np.sum,
-              "transactioncode": [InsiderAggregators.total_sell, InsiderAggregators.total_options,
+              "transactioncode": [InsiderAggregators.total_sell,
+                                  InsiderAggregators.total_options,
                                   InsiderAggregators.total_awards]})\
         .sort_values(by=("transactionshares", "sum"), ascending=False).head(5)
     return aggregates_insider
