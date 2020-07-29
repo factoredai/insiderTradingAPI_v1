@@ -37,4 +37,6 @@ async def insiders(item_id):
 
 @app.get("/raw_data/{item_id}")
 async def raw_data(item_id):
-    return Response(content=dict_frames[item_id].to_html(), media_type="text/html")
+    
+    dict_frames[item_id].to_csv("raw_data.csv")
+    return FileResponse(os.getcwd() + '/raw_data.csv')
