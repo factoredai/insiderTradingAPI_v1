@@ -13,11 +13,6 @@ import os
 from resources import PlotGenerator
 from api_utils import read_all_form_4, create_ticker2name, create_combined_data
 
-pd.set_option('display.max_rows', 500)
-pd.set_option('display.max_columns', 500)
-pd.set_option('display.width', 1000)
-quandl.ApiConfig.api_key = "txYdeX4SX2NxGzzJYsLT"
-
 app = Flask(__name__)
 api = Api(app)
 
