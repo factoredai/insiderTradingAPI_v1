@@ -40,3 +40,9 @@ async def raw_data(item_id):
     
     dict_frames[item_id].to_csv("raw_data.csv")
     return FileResponse(os.getcwd() + '/raw_data.csv')
+
+
+#@app.get("/filtered_plot/{item_id}")
+#async def plot(item_id):
+#    generate_plot(dict_frames, ticker2name, item_id)
+#    return FileResponse(os.getcwd() + '/insider_plot.png')
