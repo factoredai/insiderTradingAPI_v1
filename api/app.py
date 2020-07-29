@@ -1,7 +1,7 @@
 import sys
 
-from flask import Flask
-from flask_restful import abort, Api
+from fastapi import FastAPI, Response
+from fastapi.responses import FileResponse
 import finviz
 import pandas as pd
 import numpy as np
@@ -10,22 +10,31 @@ import yfinance as yf
 import matplotlib.pyplot as plt
 import os
 
-from resources import PlotGenerator
-from api_utils import read_all_form_4, create_ticker2name, create_combined_data
+from api.resources import generate_plot
+from api.api_utils import read_all_form_4, create_ticker2name, create_combined_data, calculate_aggregates_per_insider
 
-app = Flask(__name__)
-api = Api(app)
+app = FastAPI()
 
 # Setup the Api resource routing here
 # Route the URL to the resource
-data_filings_path = os.path.join(os.getcwd(), "data", "filings")
+data_filings_path = os.path.join("data", "filings")
 data = read_all_form_4(data_filings_path)
 ticker2name = create_ticker2name(data)
 dict_frames = create_combined_data(data)
 
-api.add_resource(PlotGenerator, '/generate_plot', resource_class_kwargs={'dict_frames':dict_frames, 
-                                                                    'ticker_name':ticker2name})
+
+@app.get("/generate_plot/{item_id}")
+async def plot(item_id):
+    generate_plot(dict_frames, ticker2name, item_id)
+    return FileResponse(os.getcwd() + '/insider_plot.png')
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+@app.get("/generate_insiders_info/{item_id}")
+async def insiders(item_id):
+    insiders = calculate_aggregates_per_insider(data, item_id)
+    return Response(content=insiders.to_html(), media_type="text/html")
+
+
+@app.get("/raw_data/{item_id}")
+async def raw_data(item_id):
+    return Response(content=dict_frames[item_id].to_html(), media_type="text/html")
