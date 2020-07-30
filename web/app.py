@@ -4,12 +4,8 @@ from fastapi import FastAPI, Response, Request
 from fastapi.responses import FileResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
-import finviz
 import pandas as pd
-import numpy as np
 import quandl
-import yfinance as yf
-import matplotlib.pyplot as plt
 import os
 
 from web.resources import generate_plot
@@ -29,15 +25,18 @@ data = read_all_form_4(data_filings_path)
 ticker2name = create_ticker2name(data)
 dict_frames = create_combined_data(data)
 
+
 @app.get("/generate_plot/{item_id}")
 async def plot(item_id):
     generate_plot(dict_frames, ticker2name, item_id)
     return FileResponse(os.getcwd() + '/insider_plot.png')
 
+
 @app.get("/generate_insiders_info/{item_id}")
 async def insiders(item_id):
     insiders = calculate_aggregates_per_insider(data, item_id)
     return Response(content=insiders.to_html(table_id="execs_table"), media_type="text/html")
+
 
 @app.get("/raw_data/{item_id}")
 async def raw_data(item_id):
@@ -50,32 +49,24 @@ app.mount("/assets", StaticFiles(directory="web/assets"), name="assets")
 app.mount("/demo", StaticFiles(directory="web/demo"), name="demo")
 app.mount("/docs", StaticFiles(directory="web/docs"), name="docs")
 
+
 @app.get("/")
 def home(request: Request):  # id: str = Form(), requested_sum: str = Form()):
     return templates.TemplateResponse("index.html", {"request": request})
+
 
 @app.get("/dashboard")
 def home(request: Request, stock_id: str):  # id: str = Form(), requested_sum: str = Form()):
     execs_table = calculate_aggregates_per_insider(data, stock_id)
     if len(execs_table) == 0:
-        return templates.TemplateResponse("404.html", { "request": request })
-    execs_table = execs_table.reset_index()
-    execs_table.columns = ["Executive", "Title", "Mean Share Price", "Total Shares",
-                           "Col 1", "Col 2", "Col 3"]
-    execs_table = execs_table.to_html(
-        table_id="execs_table",
-        index_names=False,
-        index=False,
-        na_rep="-",
-        justify="center",
-        border=0
-    )
+        return templates.TemplateResponse("404.html", {"request": request})
     return templates.TemplateResponse("dashboard.html",
-    {
-        "request": request,
-        "stock_id": stock_id,
-        "execs_table": execs_table
-    })
+                                      {
+                                          "request": request,
+                                          "stock_id": stock_id,
+                                          "execs_table": execs_table
+                                      })
+
 
 @app.get("/documentation")
 def home(request: Request):  # id: str = Form(), requested_sum: str = Form()):

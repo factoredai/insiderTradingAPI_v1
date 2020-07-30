@@ -1,5 +1,5 @@
 # from evaluate import Eval
-from api.api_utils import visualization_insider_stock
+from web.api_utils import visualization_insider_stock
 
 
 def generate_plot(dict_frames, ticker_name, ticker):

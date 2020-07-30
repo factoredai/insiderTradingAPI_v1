@@ -392,8 +392,9 @@ def calculate_aggregates_per_insider(data, ticker):
     aux = aux.rename(columns={"rptOwnerName": "Owner Name"})
     out = out.merge(aux, how="left", on="Owner Name")
 
-    style_dict = {col: "{:,.0f}" for col in out.columns[4:]}
-    style_dict["Avg Price Per Share"] = "{:.2f}"
-    style_dict["Shares Traded"] = "{:,.0f}"
-    styled_output = out.style.format(style_dict, na_rep="-").hide_index().render()
-    return styled_output
+    # style_dict = {col: "{:,.0f}" for col in out.columns[4:]}
+    # style_dict["Avg Price Per Share"] = "{:.2f}"
+    # style_dict["Shares Traded"] = "{:,.0f}"
+    # styled_output = out.style.format(style_dict, na_rep="-").hide_index()
+    # styled_output = styled_output.set_properties(**{"text-align": "center"})
+    return out  # styled_output.render()
