@@ -122,5 +122,12 @@ The data is collected from two sources:
 * [**yfinance**](https://github.com/ranaroussi/yfinance): This is an open source python API for download data from yahoo finance.
 * [**secedgar**](https://github.com/sec-edgar/sec-edgar): An open source crawler that scrapes EDGAR, the SEC database. In this Data base are stored all number 4 forms, every insider deal done has as a requirement to be reported to the SEC, such reports are precisely the number 4 forms.
 
+## Future Work
+- Look up for insiders active traders and their total return between those transactions
+- Look for correlation and causation of changes in stock price and insider tradings
+- Add this features to a Stock Prediction Model and test the potential explainability of those features
+- Get a list of traders who have had the biggest yields and follow them.
+- Anomaly detection of award execution or non execution.
+
 
 
