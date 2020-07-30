@@ -20,7 +20,7 @@ Retrieve an image showing relevant stats from insiders.
 wget http://35.164.216.200:8000/generate_plot/{ticker_name}
 ```
 **Example image:**
-![Sample Plot](plot.png)
+![Sample Plot](insider_plot.png)
 
 ### **generate_insiders_info/**
 Create a table with all the insider transactions and the executives that executed them.

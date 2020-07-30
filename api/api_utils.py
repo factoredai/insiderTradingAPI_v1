@@ -13,7 +13,7 @@ size = 15
 font = {'weight': 'bold',
         'size': size}
 params = {'legend.fontsize': size*0.7,
-          'figure.figsize': (20, 8),
+          'figure.figsize': (30, 8),
           'axes.labelsize': size,
           'axes.titlesize': size,
           'axes.titleweight': "bold",
@@ -184,7 +184,7 @@ def create_combined_data(data, start=datetime(2019, 7, 21)):
 
 def visualization_insider_stock(key, val, ticker2name, save_path=None,
                                 from_api=False,
-                                start_date=datetime(2019, 7, 21), figsize=(15, 10),
+                                start_date=datetime(2019, 7, 21), figsize=(30, 30),
                                 codes=["S", "P", "M", "A"],
                                 display=["price", "volume",
                                          "relative_volume",
