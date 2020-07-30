@@ -17,7 +17,9 @@
           <div class="card-header">
             <h3 class="card-title">Transaction Timeline</h3>
           </div>
-          <img src="/generate_plot/{{stock_id}}"></img>
+          <center>
+            <img width="90%" src="/generate_plot/{{stock_id}}" style="padding-top: 30px; padding-bottom: 30px;"></img>
+          </center>
         </div>
       </div>
       <div class="col-12">
@@ -25,9 +27,12 @@
           <div class="card-header">
             <h3 class="card-title">Executive Transactions</h3>
           </div>
-          {{ execs_table|safe }}
+          <div class="card-body o-auto" style="height: 25rem">
+            {{ execs_table|safe }}
+          </div>
           <script>
             document.getElementById("execs_table").className += " table table-hover table-outline table-vcenter text-nowrap card-table text-center";
+            document.getElementById("execs_table").setAttribute("width", "100%");
           </script>
         </div>
       </div>

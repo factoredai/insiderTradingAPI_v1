@@ -63,6 +63,9 @@ def home(request: Request):  # id: str = Form(), requested_sum: str = Form()):
 @app.get("/dashboard")
 def home(request: Request, stock_id: str):  # id: str = Form(), requested_sum: str = Form()):
     execs_table = calculate_aggregates_per_insider(data, stock_id)
+    for col in execs_table.columns:
+        if execs_table[col].dtype == "float":
+            execs_table[col] = execs_table[col].apply(lambda x: "%.2f" % x)
     if len(execs_table) == 0:
         return templates.TemplateResponse("404.html", { "request": request })
     execs_table = execs_table.to_html(
