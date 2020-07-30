@@ -26,6 +26,11 @@ if not(os.path.exists(data_extracted_filename)):
     data.to_csv(data_extracted_filename, index=False, header=True)
 else:
     data = pd.read_csv(data_extracted_filename, header=0)
+dict_ticker = {"[FB]": "FB", 
+               'BRK.A': "BRK-B", 
+               "BRKA": "BRK-B"}
+data['ticker'] = data['ticker'].map(dict_ticker).fillna(data['ticker'])
+data = data.dropna(subset=["transactiondate"])
 ticker2name = create_ticker2name(data)
 dict_frames = create_combined_data(data)
 
