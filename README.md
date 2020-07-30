@@ -32,7 +32,7 @@ Some transaction codes were ignored as they may not indicate good information (i
 **A, P, M, S**. As they can have some relationship with company drivers or signal (i. e: A purchase from an insider is not common, as they usually have  stock options, awards, etc. So buying more shares in themarket may bring a positive signal for the company).
 
 ## Rest API  
-We developed a web application with three endpoints: 
+We developed a web application with three endpoints: ([an interactive documentation](http://poc.tomasolarte.com:8080/docs)) 
 
 ### **GET generate_plot/**
 Retrieve an image showing relevant stats from insiders.
@@ -115,6 +115,12 @@ The tickers available are:
 - ADBE  -  ADOBE INC.
 - V  -  VISA INC.
 - JPM  -  JPMORGAN CHASE & CO
+
+
+## Machine learning
+
+This tool can be a useful resource for a deep learning model. First for constructing a dataset made by sliding windows you can see this notebook. In addition in this repository is included two tutorials of deep learning models that predict insider trading. In the first tutorial a simple RNN architecture is used, in the second a more advanced TCNN (temporal convolution neural network) is implemented.
+
 
 ## Data sources
 The data is collected from two sources:
