@@ -132,3 +132,8 @@ dmypy.json
 *.csv
 *.pkl
 *.txt
+*.zip
+*.tar
+!top40_sp500.csv
+.vscode/
+raw_data.csv

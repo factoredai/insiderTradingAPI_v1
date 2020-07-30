@@ -25,23 +25,29 @@ app = FastAPI()
 # Setup the Api resource routing here
 # Route the URL to the resource
 data_filings_path = os.path.join("data", "filings")
-data = read_all_form_4(data_filings_path)
+data_extracted_filename = os.path.join("data", "data.csv")
+if not(os.path.exists(data_extracted_filename)):
+    data = read_all_form_4(data_filings_path)
+    data.to_csv(data_extracted_filename, index=False, header=True)
+else:
+    data = pd.read_csv(data_extracted_filename, header=0)
 ticker2name = create_ticker2name(data)
 dict_frames = create_combined_data(data)
 
-@app.get("/generate_plot/{item_id}")
-async def plot(item_id):
-    generate_plot(dict_frames, ticker2name, item_id)
-    return FileResponse(os.getcwd() + '/insider_plot.png')
+@app.get("/generate_plot/{stock_id}")
+async def plot(stock_id):
+    generate_plot(dict_frames, ticker2name, stock_id)
+    return FileResponse('insider_plot.png')
 
-@app.get("/generate_insiders_info/{item_id}")
-async def insiders(item_id):
-    insiders = calculate_aggregates_per_insider(data, item_id)
+@app.get("/generate_insiders_info/{stock_id}")
+async def insiders(stock_id):
+    insiders = calculate_aggregates_per_insider(data, stock_id)
     return Response(content=insiders.to_html(table_id="execs_table"), media_type="text/html")
 
-@app.get("/raw_data/{item_id}")
-async def raw_data(item_id):
-    return Response(content=dict_frames[item_id].to_html(), media_type="text/html")
+@app.get("/raw_data/{stock_id}")
+async def raw_data(stock_id):
+    dict_frames[stock_id].to_csv("raw_data.csv")
+    return FileResponse('raw_data.csv')
 
 # Web GUI setup and endpoint
 templates = Jinja2Templates(directory="web/templates/")
@@ -59,9 +65,6 @@ def home(request: Request, stock_id: str):  # id: str = Form(), requested_sum: s
     execs_table = calculate_aggregates_per_insider(data, stock_id)
     if len(execs_table) == 0:
         return templates.TemplateResponse("404.html", { "request": request })
-    execs_table = execs_table.reset_index()
-    execs_table.columns = ["Executive", "Title", "Mean Share Price", "Total Shares",
-                           "Col 1", "Col 2", "Col 3"]
     execs_table = execs_table.to_html(
         table_id="execs_table",
         index_names=False,
@@ -74,9 +77,6 @@ def home(request: Request, stock_id: str):  # id: str = Form(), requested_sum: s
     {
         "request": request,
         "stock_id": stock_id,
+        "stock_name": ticker2name[stock_id],
         "execs_table": execs_table
     })
-
-@app.get("/documentation")
-def home(request: Request):  # id: str = Form(), requested_sum: str = Form()):
-    return templates.TemplateResponse("documentation.html", {"request": request})
