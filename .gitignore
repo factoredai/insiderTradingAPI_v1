@@ -135,3 +135,5 @@ dmypy.json
 *.zip
 *.tar
 !top40_sp500.csv
+.vscode/
+raw_data.csv
