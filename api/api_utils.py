@@ -9,13 +9,14 @@ import matplotlib.pyplot as plt
 import matplotlib
 
 # Params mpl
-font = {'weight': 'bold',
-        'size': 12}
 size = 15
+font = {'weight': 'bold',
+        'size': size}
 params = {'legend.fontsize': size*0.7,
           'figure.figsize': (30, 8),
           'axes.labelsize': size,
           'axes.titlesize': size,
+          'axes.titleweight': "bold",
           'xtick.labelsize': size*0.9,
           'ytick.labelsize': size*0.9,
           'axes.formatter.limits': (-4, 4),
@@ -259,7 +260,7 @@ def visualization_insider_stock(key, val, ticker2name, save_path=None,
             ax1.plot(val.index, val[f"{code}_transactionpricepershare"],
                      "o", color=color, label=f"{label} insider")
     ax1.set_ylabel("Price")
-    ax1.legend(loc=2, title="Price")
+    ax1 = legend_if_exist(ax1, loc=2, title="Price")
 
     if len(display) > 1:
         if "volume" in display:
@@ -272,7 +273,7 @@ def visualization_insider_stock(key, val, ticker2name, save_path=None,
                     ax2.bar(val.index, val[f"{code}_transactionshares"], 1,
                             alpha=alpha, color=color,
                             label=f"{label} insider")
-            ax2.legend(loc=1, title="Volume")
+            ax2 = legend_if_exist(ax2, loc=1, title="Volume")
             ax2.set_ylabel("Volume")
         if "relative_volume" in display:
             ax3 = ax1.twinx()
@@ -289,13 +290,21 @@ def visualization_insider_stock(key, val, ticker2name, save_path=None,
                                     val["Volume"]),
                              "x", color=color,
                              label=f"{label} insider")
-            ax3.legend(loc=3, title="Relative Volume")
+            ax3 = legend_if_exist(ax3, loc=3, title="Relative Volume")
             ax3.set_ylabel("Relative Volume")
-    plt.title(ticker2name[key])
+    fig.subplots_adjust(hspace=.3)
+    plt.title("Insider Trading Events")
     if save_path is None:
         plt.show()
     else:
-        plt.savefig(save_path)
+        plt.savefig(save_path, bbox_inches='tight')
+
+
+def legend_if_exist(ax, loc, title):
+    handles, labels = ax.get_legend_handles_labels()
+    if len(labels) > 0:
+        ax.legend(loc=loc, title=title)
+    return ax
 
 
 def barplot_base_centered(ax, values, base=100, width=0.9, alpha=0.7):
@@ -306,7 +315,7 @@ def barplot_base_centered(ax, values, base=100, width=0.9, alpha=0.7):
            color="r", alpha=alpha, zorder=4)
     or_yticks = ax.get_yticks()
     transformed_ticks = base + or_yticks
-    ax.set_yticklabels(transformed_ticks)
+    ax.set_yticklabels(transformed_ticks.astype(np.int64))
     return ax
 
 
@@ -315,18 +324,19 @@ def plot_ma_5days(ax, val):
     aux = val["Perc_amount_vs_MA"]*100 - delta
     threshold = 100 - delta
     ax = barplot_base_centered(ax, aux, base=threshold)
-    ax.set_ylabel("% Amount traded")
-    ax.legend(loc=2)
-    ax.set_title("%Amount traded relative to 5 last days MA")
+    ax.set_ylabel("% Volume")
+    legend_if_exist(ax, loc=2, title=None)
+    ax.set_title("% Volume relative to MA(5)")
     return ax
 
 
 def plot_sp100(ax, val):
     color = "steelblue"
     ax.plot(val["Perc_amount_sp100"]*100, linestyle="-",
-            color=color, label="%Amount traded relative to Avg SP100 Company")
-    ax.set_ylabel("% Amount traded")
-    ax.legend(loc=2)
+            color=color, label="% Volume relative to Avg SP500 Company")
+    ax.set_ylabel("% Volume")
+    ax.set_title("% Volume relative to Avg SP500 Company")
+    # legend_if_exist(ax, loc=2, title=None)
     return ax
 
 
@@ -365,12 +375,25 @@ class InsiderAggregators():
 
 
 def calculate_aggregates_per_insider(data, ticker):
-    aggregates_insider = data[data["ticker"] == ticker].groupby("rptOwnerName")\
+    out = data[data["ticker"] == ticker].groupby(["rptOwnerName"])\
         .agg({"officerTitle": InsiderAggregators.title,
               "transactionpricepershare": InsiderAggregators.mean_exclude_le_0,
-              "transactionshares": np.sum,
-              "transactioncode": [InsiderAggregators.total_sell,
-                                  InsiderAggregators.total_options,
-                                  InsiderAggregators.total_awards]})\
-        .sort_values(by=("transactionshares", "sum"), ascending=False).head(5)
-    return aggregates_insider
+              "transactionshares": np.sum}).sort_values("transactionshares",
+                                                        ascending=False).reset_index()
+    out.columns = ["Owner Name", "Officer Title",
+                   "Avg Price Per Share", "Shares Traded"]
+    out["Officer Title"] = out["Officer Title"].fillna("-")
+
+    aux = data[data["ticker"] == ticker].groupby(["rptOwnerName",
+                                                  "transactioncode"])["transactionshares"]\
+        .sum().to_frame().unstack(1)
+    aux.columns = [code + " Shares Reported" for _, code in aux.columns]
+    aux = aux.fillna(0).reset_index()
+    aux = aux.rename(columns={"rptOwnerName": "Owner Name"})
+    out = out.merge(aux, how="left", on="Owner Name")
+
+    style_dict = {col: "{:,.0f}" for col in out.columns[4:]}
+    style_dict["Avg Price Per Share"] = "{:.2f}"
+    style_dict["Shares Traded"] = "{:,.0f}"
+    styled_output = out.style.format(style_dict, na_rep="-").hide_index().render()
+    return styled_output
