@@ -2,7 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+.vscode/
+!requirements.txt
 # C extensions
 *.so
 
@@ -137,3 +138,4 @@ dmypy.json
 !top40_sp500.csv
 .vscode/
 raw_data.csv
+!requirements.txt
