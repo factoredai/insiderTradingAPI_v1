@@ -32,11 +32,10 @@ async def plot(item_id):
 @app.get("/generate_insiders_info/{item_id}")
 async def insiders(item_id):
     insiders = calculate_aggregates_per_insider(data, item_id)
-    return Response(content=insiders.to_html(), media_type="text/html")
+    return Response(content=insiders, media_type="text/html")
 
 
 @app.get("/raw_data/{item_id}")
 async def raw_data(item_id):
-    
     dict_frames[item_id].to_csv("raw_data.csv")
     return FileResponse(os.getcwd() + '/raw_data.csv')
