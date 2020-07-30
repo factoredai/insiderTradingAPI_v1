@@ -26,8 +26,8 @@ if not(os.path.exists(data_extracted_filename)):
     data.to_csv(data_extracted_filename, index=False, header=True)
 else:
     data = pd.read_csv(data_extracted_filename, header=0)
-dict_ticker = {"[FB]": "FB", 
-               'BRK.A': "BRK-B", 
+dict_ticker = {"[FB]": "FB",
+               'BRK.A': "BRK-B",
                "BRKA": "BRK-B"}
 data['ticker'] = data['ticker'].map(dict_ticker).fillna(data['ticker'])
 data = data.dropna(subset=["transactiondate"])
@@ -52,8 +52,9 @@ async def raw_data(stock_id):
     dict_frames[stock_id].to_csv("raw_data.csv")
     return FileResponse('raw_data.csv')
 
-# Web GUI setup and endpoint
+# Web GUI setup and endpoint
 templates = Jinja2Templates(directory="web/templates/")
+
 # mount an independent app for static files at /gui/static
 app.mount("/assets", StaticFiles(directory="web/assets"), name="assets")
 app.mount("/demo", StaticFiles(directory="web/demo"), name="demo")
