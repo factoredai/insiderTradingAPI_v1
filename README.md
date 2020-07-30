@@ -119,7 +119,9 @@ The tickers available are:
 
 ## Machine learning
 
-This tool can be a useful resource for a deep learning model. First for constructing a dataset made by sliding windows you can see this notebook. In addition in this repository is included two tutorials of deep learning models that predict insider trading. In the first tutorial a simple RNN architecture is used, in the second a more advanced TCNN (temporal convolution neural network) is implemented.
+This tool can be a useful resource for a deep learning model. First for constructing a dataset made by sliding windows you can see this [notebook](https://github.com/factoredai/poc-farallon/blob/master/Tutorials/Tf_dataset_cosntruction.ipynb). In addition in this repository is included two tutorials of deep learning models that predict insider trading. In the first tutorial a simple [RNN](https://github.com/factoredai/poc-farallon/blob/master/Tutorials/BaseLine.ipynb) architecture is used, in the second a more advanced [TCNN](https://github.com/factoredai/poc-farallon/blob/master/Tutorials/T_CNN.ipynb) (temporal convolution neural network) is implemented. This last one is one of the most accurate model for time series prediction. A detailed description of this model architecture is :
+
+![architecture](images/architecture.png)
 
 
 ## Data sources
