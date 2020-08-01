@@ -117,7 +117,7 @@ The tickers available are:
 
 ## Machine learning
 
-This API can feed data to deep learning model. First, to construct a dataset made by sliding windows you can see this [notebook](https://github.com/factoredai/insiderTradingAPI_v1/blob/master/Tutorials/Tf_dataset_cosntruction.ipynb). In addition, in this repository there are included two deep learning models that predict insider trading. In the first notebook a [RNN- GRU](https://github.com/factoredai/insiderTradingAPI_v1/blob/master/Tutorials/BaseLine.ipynb) architecture is used and in the second a more advanced [TCNN](https://github.com/factoredai/insiderTradingAPI_v1/blob/master/Tutorials/T_CNN.ipynb) (temporal convolution neural network) is implemented (SOTA time series prediction). A diagram of this model architecture can be found below :
+This API can feed data to deep learning model. First, to construct a dataset made by sliding windows you can see this [notebook](https://github.com/factoredai/insiderTradingAPI_v1/blob/master/Tutorials/Tf_dataset_cosntruction.ipynb). In addition, in this repository there are included two deep learning models that predict insider trading. In the first notebook a [RNN- GRU](https://github.com/factoredai/insiderTradingAPI_v1/blob/master/sample_notebooks/BaseLine.ipynb) architecture is used and in the second a more advanced [TCNN](https://github.com/factoredai/insiderTradingAPI_v1/blob/master/Tutorials/T_CNN.ipynb) (temporal convolution neural network) is implemented (SOTA time series prediction). A diagram of this model architecture can be found below :
 
 ![architecture](images/architecture.png)
 
