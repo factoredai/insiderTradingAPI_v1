@@ -1,0 +1,42 @@
+{% extends "./index.html" %}
+{% block content %}
+
+<div class="my-3 my-md-5">
+    <div class="container">
+      <!--
+      <div class="page-header">
+        <h1 class="page-title">Dashboard</h1>
+      </div>
+      -->
+      <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">{{stock_name}}</h1>
+        <a href="/raw_data/{{stock_id}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fe fe-download text-white-50"></i> Download Raw</a>
+      </div>
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Transaction Timeline</h3>
+          </div>
+          <center>
+            <img width="90%" src="/generate_plot/{{stock_id}}" style="padding-top: 30px; padding-bottom: 30px;"></img>
+          </center>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Executive Transactions</h3>
+          </div>
+          <div class="card-body o-auto" style="height: 25rem">
+            {{ execs_table|safe }}
+          </div>
+          <script>
+            document.getElementById("execs_table").className += " table table-hover table-outline table-vcenter text-nowrap card-table text-center";
+            document.getElementById("execs_table").setAttribute("width", "100%");
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
